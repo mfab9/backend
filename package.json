@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "backend of chai and code",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "nodemon src/index.js"
   },
@@ -12,5 +13,8 @@
     "chai"
   ],
   "author": "Rahul",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
 }
