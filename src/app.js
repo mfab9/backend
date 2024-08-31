@@ -10,7 +10,15 @@ app.use(cors({
 app.use(express.json({limit:"16kb"})) //ye form bhrne se arha hai data
 app.use(express.urlencoded({extended:true,limit:"16kb"})) // ye data arha from url 
 app.use(express.static("public")) //ye hai public naam ki file jisme imags /vids hogi 
-
 app.use(cookieParser()); //more option later...
 
-export {app}
+//routes
+import userRouter from './routes/user.routes.js'
+
+
+//routes declaretion 
+app.use("/api/v1/users",userRouter) ///users pe jayega to userRuter ko controll chala jayega
+
+
+
+export  {app}
